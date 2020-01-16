@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styles from './Search.module.css'
 import SearchField from "../SearchField/SearchField";
 import SearchResultDashboard from "../SearchResultDashboard/ResultDashboard";
@@ -6,6 +6,9 @@ import {connect} from "react-redux";
 import {loadMoreGifs, searchGifsByRequest} from "../../redux/reducers/search-gif-reducer";
 
 export const Search = (props) => {
+    useEffect(() => {
+        props.searchGifsByRequest()
+    }, []);
     return (
     <div className={styles.wrapper}>
         <SearchField onSearch={props.searchGifsByRequest}/>
