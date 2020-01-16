@@ -1,0 +1,20 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.more_button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+    transition: background-color .3s linear;
+}
+
+.more_button:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.4);
+}
